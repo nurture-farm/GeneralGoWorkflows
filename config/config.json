@@ -1,0 +1,19 @@
+{
+  "workflow_config": {
+    "namespace": "default",
+    "temporal_host_port": "localhost:7233",
+    "worker_name": "GeneralGoWorker",
+    "ce_task_queue": "CEWorker",
+    "cep_task_queue": "CEPWorker",
+    "cmps_task_queue": "CMPSWorker",
+  },
+  "partition_table_name": "user_windowed_event_data_zstd_2",
+  "partition_database_name": "test_events_data",
+  "partition_bucket_path": "s3://nf-event-bucket-stage/flink-zstd/",
+  "create_cron_partition_schedule": "0 0 * * WED",
+  "email_template_name": "template_warning_template",
+  "template_warning_cron_schedule": "42 07 * * *",
+  "template_threshold_percentage": "30",
+  "aws_access_key": "",
+  "aws_secret_key": ""
+}
